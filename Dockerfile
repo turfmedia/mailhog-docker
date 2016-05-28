@@ -1,5 +1,5 @@
 FROM alpine:3.3
-MAINTAINER Alexey Diyan <alexey.diyan@gmail.com>
+MAINTAINER Stephane Busso <stephane@turfmedia.com>
 
 RUN set -x \
   && buildDeps='go git bzr' \
@@ -9,5 +9,5 @@ RUN set -x \
   && apk del $buildDeps \
   && rm -rf /var/cache/apk/* /tmp/*
 
-EXPOSE 1025 8025
+EXPOSE 1025 1080
 ENTRYPOINT ["MailHog"]
